@@ -24,9 +24,6 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        Debug.Log(controls.Player.Horizontal.ReadValue<float>());
-        Debug.Log(controls.Player.Vertical.ReadValue<float>());
-
         playerRb.velocity = new Vector2(controls.Player.Horizontal.ReadValue<float>() * speed, controls.Player.Vertical.ReadValue<float>() * speed);
     }
 
@@ -35,6 +32,5 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Move(){
-        Debug.Log("move");
     }
 }
