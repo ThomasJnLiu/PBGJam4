@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerFollow : MonoBehaviour
 {
     private Transform PlayerTransform;
-    public float cameraZoom = 3.0f;
+    public float cameraZoom = 5.0f;
 
     void Start()
     {
