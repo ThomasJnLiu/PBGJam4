@@ -20,6 +20,7 @@ public class Skull : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
+        EnemyChangePath.instance.SetLocation();
         playerHere = true;
         if(other.gameObject.tag == "Player"){
             Debug.Log("found player");
@@ -47,6 +48,7 @@ public class Skull : MonoBehaviour
         if(playerHere){
             Debug.Log("player spotted");
             playerSpotted = true;
+            GameManager.instance.playerSpotted = true;
             animator.SetFloat("PlayerVisionTime", 2f);
             StartCoroutine("StopAnimation");
         }
@@ -56,6 +58,7 @@ public class Skull : MonoBehaviour
         yield return new WaitForSeconds(3f);
         animator.SetFloat("PlayerVisionTime", 0f);
         playerSpotted = false;
+        GameManager.instance.playerSpotted = false;
     }
     // private void OnCollisionEnter2D(Collision2D other){
     //     Debug.Log("found player");
