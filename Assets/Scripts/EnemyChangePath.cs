@@ -18,7 +18,7 @@ public class EnemyChangePath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.V)){
             if(!chasingPlayer){
                 enemy.GetComponent<Patrol>().enabled = false;
                 enemy.GetComponent<AIDestinationSetter>().enabled = true;

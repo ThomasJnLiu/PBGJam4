@@ -84,7 +84,6 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("collided");
         if(other.gameObject.tag == "Treasure"){
             Debug.Log("got treasure");
             score++;
