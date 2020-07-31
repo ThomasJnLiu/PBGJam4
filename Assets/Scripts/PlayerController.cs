@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,8 +15,12 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public Image sprintCircle;
+    //purely for sprint circle graphic lmao
     public float sprintTimer = 500f;
 
+    public int score = 0;
+
+    public TextMeshProUGUI scoreText;
     void Awake(){
         controls = new PlayerInput();
         controls.Enable();
@@ -76,5 +81,15 @@ public class PlayerController : MonoBehaviour
         }
         
         canSprint = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("collided");
+        if(other.gameObject.tag == "Treasure"){
+            Debug.Log("got treasure");
+            score++;
+            scoreText.SetText("Treasure: " + score);
+            Destroy(other.gameObject);
+        }
     }
 }
