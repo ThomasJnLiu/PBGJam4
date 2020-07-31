@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 5a8d01893bcbba2439afc1a50c540804
+guid: de9c4f7459b5a1c45b47b5c825d48d83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1809253186724451941
-    second: Big_Monster_0
+      213: -1475732052316142034
+    second: Small_Monster_Move_0
   - first:
-      213: 6094822206074740759
-    second: Big_Monster_1
+      213: -5802751754605024398
+    second: Small_Monster_Move_1
   - first:
-      213: -6063175555495070552
-    second: Big_Monster_2
+      213: -7905660760523521617
+    second: Small_Monster_Move_2
   - first:
-      213: -8623913843957389802
-    second: Big_Monster_3
+      213: 4977684684042560233
+    second: Small_Monster_Move_3
   - first:
-      213: 6832783031647026174
-    second: Big_Monster_4
+      213: 7712696224434730413
+    second: Small_Monster_Move_4
+  - first:
+      213: -7808680560310464444
+    second: Small_Monster_Move_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Big_Monster_0
+      name: Small_Monster_Move_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99ab8000dd34e6e0800000000000000
-      internalID: -1809253186724451941
+      spriteID: e26c9066485258be0800000000000000
+      internalID: -1475732052316142034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_1
+      name: Small_Monster_Move_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7106f323188259450800000000000000
-      internalID: 6094822206074740759
+      spriteID: 27b2ef2060c787fa0800000000000000
+      internalID: -5802751754605024398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_2
+      name: Small_Monster_Move_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a472e3d4f54bdba0800000000000000
-      internalID: -6063175555495070552
+      spriteID: fa1404e9c63794290800000000000000
+      internalID: -7905660760523521617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_3
+      name: Small_Monster_Move_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616a855ec04b15880800000000000000
-      internalID: -8623913843957389802
+      spriteID: 9e26244e8d9441540800000000000000
+      internalID: 4977684684042560233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_4
+      name: Small_Monster_Move_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,8 +217,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb33a437fbe2de50800000000000000
-      internalID: 6832783031647026174
+      spriteID: da5bded3a50090b60800000000000000
+      internalID: 7712696224434730413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Monster_Move_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440523e076ef1a390800000000000000
+      internalID: -7808680560310464444
       vertices: []
       indices: 
       edges: []

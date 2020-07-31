@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 5a8d01893bcbba2439afc1a50c540804
+guid: 8dd9dbc77577fdc4ab4c9265b2d923db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1809253186724451941
-    second: Big_Monster_0
+      213: -2491237368301752901
+    second: Small_Monster_Scream_0
   - first:
-      213: 6094822206074740759
-    second: Big_Monster_1
+      213: 2358812374831249939
+    second: Small_Monster_Scream_1
   - first:
-      213: -6063175555495070552
-    second: Big_Monster_2
+      213: -3662505988790414638
+    second: Small_Monster_Scream_2
   - first:
-      213: -8623913843957389802
-    second: Big_Monster_3
+      213: 3357620093813927055
+    second: Small_Monster_Scream_3
   - first:
-      213: 6832783031647026174
-    second: Big_Monster_4
+      213: -1137110049359725962
+    second: Small_Monster_Scream_4
+  - first:
+      213: -2957744884552091265
+    second: Small_Monster_Scream_5
+  - first:
+      213: -709436134896324161
+    second: Small_Monster_Scream_6
+  - first:
+      213: -8429011806929018801
+    second: Small_Monster_Scream_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Big_Monster_0
+      name: Small_Monster_Scream_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99ab8000dd34e6e0800000000000000
-      internalID: -1809253186724451941
+      spriteID: bbde13b00d85d6dd0800000000000000
+      internalID: -2491237368301752901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_1
+      name: Small_Monster_Scream_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7106f323188259450800000000000000
-      internalID: 6094822206074740759
+      spriteID: 31abc9d7b5f2cb020800000000000000
+      internalID: 2358812374831249939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_2
+      name: Small_Monster_Scream_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a472e3d4f54bdba0800000000000000
-      internalID: -6063175555495070552
+      spriteID: 2d2186e353a2c2dc0800000000000000
+      internalID: -3662505988790414638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_3
+      name: Small_Monster_Scream_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616a855ec04b15880800000000000000
-      internalID: -8623913843957389802
+      spriteID: f8c2e769fa9a89e20800000000000000
+      internalID: 3357620093813927055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Big_Monster_4
+      name: Small_Monster_Scream_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
-        height: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,8 +223,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb33a437fbe2de50800000000000000
-      internalID: 6832783031647026174
+      spriteID: 67af26d4f6c2830f0800000000000000
+      internalID: -1137110049359725962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Monster_Scream_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f793b04c2baf3f6d0800000000000000
+      internalID: -2957744884552091265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Monster_Scream_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1bda418939726f0800000000000000
+      internalID: -709436134896324161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small_Monster_Scream_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f402c60ab62260b80800000000000000
+      internalID: -8429011806929018801
       vertices: []
       indices: 
       edges: []
