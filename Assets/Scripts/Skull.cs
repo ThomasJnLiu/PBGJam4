@@ -40,6 +40,34 @@ public class Skull : MonoBehaviour
         }
     }
     public IEnumerator PlayerCountdown(){
+        switch(PlayerController.instance.score){
+            case 0:
+                Debug.Log("0");
+                yield return new WaitForSeconds(2f);
+                break;   
+            case 1:
+                Debug.Log("1");
+                yield return new WaitForSeconds(1.8f);
+                break;               
+            case 2:
+                Debug.Log("2");
+                yield return new WaitForSeconds(1.6f);
+                break;   
+            case 3:
+                Debug.Log("3");
+                yield return new WaitForSeconds(1.4f);
+                break;            
+            case 4:
+                Debug.Log("4");
+                yield return new WaitForSeconds(1.2f);
+                break;
+            case 5:
+                Debug.Log("5");
+                yield return new WaitForSeconds(1.0f);
+                break;
+            default:
+            break;
+        }
         yield return new WaitForSeconds(1.1f);
 
         // 2 when easiest, 1.1 when hardest

@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TommyScene.unity
     guid: 360aefc43a920d94bbf6e8ed676bd1d8
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 339690c59da246543b0da5ca6879a496
+  - enabled: 1
+    path: Assets/Scenes/RetryScreen.unity
+    guid: 42221333ba5848e4bbbecd0d84370d4b
+  - enabled: 1
+    path: Assets/Scenes/DieScreen.unity
+    guid: 2c5947db8f144464789d8f13b50afef0
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: deb0a249adbf1b44abfa178a0bf2e4d8
   m_configObjects: {}

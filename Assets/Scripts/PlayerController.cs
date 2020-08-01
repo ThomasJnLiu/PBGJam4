@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     PlayerInput controls;
     float speed = 5f;
     float totalSpeed;
@@ -29,6 +30,23 @@ public class PlayerController : MonoBehaviour
         controls.Player.Horizontal.performed += _ => Move();
         controls.Player.Vertical.performed += _ => Move();
         controls.Player.Sprint.performed += _ => Sprint();
+
+        if (instance == null)   
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            // A unique case where the Singleton exists but not in this scene
+            if (instance.gameObject.scene.name == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(this);
+            }
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -89,6 +107,15 @@ public class PlayerController : MonoBehaviour
             score++;
             scoreText.SetText("Treasure: " + score+"/5");
             Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.tag == "Exit"){
+            if(score == 5){
+                SceneManager.LoadScene("WinScreen");
+            }else{
+                SceneManager.LoadScene("RetryScreen");
+            }
+            
         }
     }
 }
