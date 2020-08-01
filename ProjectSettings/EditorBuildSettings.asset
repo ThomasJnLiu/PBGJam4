@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: deb0a249adbf1b44abfa178a0bf2e4d8
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TommyScene.unity
     guid: 360aefc43a920d94bbf6e8ed676bd1d8
   - enabled: 1
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DieScreen.unity
     guid: 2c5947db8f144464789d8f13b50afef0
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: deb0a249adbf1b44abfa178a0bf2e4d8
   m_configObjects: {}

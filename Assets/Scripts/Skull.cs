@@ -20,24 +20,30 @@ public class Skull : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        EnemyChangePath.instance.SetLocation();
-        playerHere = true;
         if(other.gameObject.tag == "Player"){
-            Debug.Log("found player");
-            animator.SetFloat("PlayerVisionTime", 1f);
+            EnemyChangePath.instance.SetLocation();
+            playerHere = true;
+            if(other.gameObject.tag == "Player"){
+                Debug.Log("found player");
+                animator.SetFloat("PlayerVisionTime", 1f);
+            }
+            StartCoroutine("PlayerCountdown");
         }
-        StartCoroutine("PlayerCountdown");
+
     }
 
     private void OnTriggerExit2D(Collider2D other){
-        StopCoroutine("PlayerCountdown");
         if(other.gameObject.tag == "Player"){
-            Debug.Log("player left");
-            if(!playerSpotted){
-                animator.SetFloat("PlayerVisionTime", 0f);
+            StopCoroutine("PlayerCountdown");
+            if(other.gameObject.tag == "Player"){
+                Debug.Log("player left");
+                if(!playerSpotted){
+                    animator.SetFloat("PlayerVisionTime", 0f);
+                }
+                playerHere = false;
             }
-            playerHere = false;
         }
+
     }
     public IEnumerator PlayerCountdown(){
         switch(PlayerController.instance.score){
@@ -68,28 +74,29 @@ public class Skull : MonoBehaviour
             default:
             break;
         }
-        yield return new WaitForSeconds(1.1f);
 
         // 2 when easiest, 1.1 when hardest
         PlayerCheck();
     }
 
     private void PlayerCheck(){
-        if(playerHere){
+        if(playerHere && !playerSpotted){
             Debug.Log("player spotted");
             playerSpotted = true;
+            GetComponent<AudioSource>().Play();
             GameManager.instance.playerSpotted = true;
             animator.SetFloat("PlayerVisionTime", 2f);
-            StartCoroutine("StopAnimation");
+            // StartCoroutine("StopAnimation");
+            GameManager.instance.AlertMusic();
         }
     }
 
-    public IEnumerator StopAnimation(){
-        yield return new WaitForSeconds(3f);
-        animator.SetFloat("PlayerVisionTime", 0f);
-        playerSpotted = false;
-        GameManager.instance.playerSpotted = false;
-    }
+    // public IEnumerator StopAnimation(){
+    //     yield return new WaitForSeconds(3f);
+    //     animator.SetFloat("PlayerVisionTime", 0f);
+    //     playerSpotted = false;
+    //     GameManager.instance.playerSpotted = false;
+    // }
     // private void OnCollisionEnter2D(Collision2D other){
     //     Debug.Log("found player");
     //     if(other.gameObject.tag == "Player"){

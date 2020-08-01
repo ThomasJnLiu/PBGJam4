@@ -58,22 +58,22 @@ public class EnemyChangePath : MonoBehaviour
         }
 
         if(GameManager.instance.playerSpotted){
-                enemy.GetComponent<AIPath>().maxSpeed=8f;
+                enemy.GetComponent<AIPath>().maxSpeed=5f;
                 enemy.GetComponent<Patrol>().enabled = false;
                 enemy.GetComponent<AIDestinationSetter>().enabled = true;
-                enemy.GetComponent<AIDestinationSetter>().target = tempLocation.transform;
+                enemy.GetComponent<AIDestinationSetter>().target = location;
                 Debug.Log("going to " + tempLocation);
                 chasingPlayer = true;
         }
 
-        if(chasingPlayer && enemy.GetComponent<AIPath>().reachedDestination){
-                enemy.GetComponent<AIPath>().maxSpeed=3f;
-                enemy.GetComponent<Patrol>().enabled = true;
-                enemy.GetComponent<AIDestinationSetter>().enabled = false;
-                Debug.Log("not chasing player");
+        // if(chasingPlayer && enemy.GetComponent<AIPath>().reachedDestination){
+        //         enemy.GetComponent<AIPath>().maxSpeed=3f;
+        //         enemy.GetComponent<Patrol>().enabled = true;
+        //         enemy.GetComponent<AIDestinationSetter>().enabled = false;
+        //         Debug.Log("not chasing player");
 
-                chasingPlayer = false;
-        }
+        //         chasingPlayer = false;
+        // }
         
     }
 

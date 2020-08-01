@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -17,11 +18,14 @@ public class PlayerController : MonoBehaviour
 
     public Image sprintCircle;
     //purely for sprint circle graphic lmao
-    public float sprintTimer = 500f;
+    public float sprintTimer = 300f;
 
     public int score = 0;
 
     public TextMeshProUGUI scoreText;
+
+    public AudioSource audio;
+    public AudioSource audio2;
     void Awake(){
         controls = new PlayerInput();
         controls.Enable();
@@ -62,13 +66,23 @@ public class PlayerController : MonoBehaviour
 
         if(playerRb.velocity.x < 0){
             transform.localScale = new Vector3(-1f, 1f, 1f);
+            
         
         }
         if(playerRb.velocity.x > 0){
             transform.localScale = new Vector3(1f, 1f, 1f);
+
         }
+    }
 
+    void FixedUpdate(){
+        if(totalSpeed == 0){
+            audio.Stop();
+        }
+    }
 
+    public void Move(){
+            audio.Play();
     }
 
     public void Sprint(){
@@ -83,8 +97,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void Move(){
-    }
 
     public IEnumerator RunTimer(){
         speed = 8f;
@@ -92,9 +104,9 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Running", false);
         animator.SetFloat("AnimSpeed", 1f);
         speed = 5f;
-        for(int i = 0; i < 500; i++){
+        for(int i = 0; i < 300; i++){
             sprintTimer++;
-            sprintCircle.fillAmount = sprintTimer / 500f;
+            sprintCircle.fillAmount = sprintTimer / 300f;
             yield return new WaitForSeconds(0.01f);
         }
         
@@ -106,6 +118,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("got treasure");
             score++;
             scoreText.SetText("Treasure: " + score+"/5");
+            audio2.Play();
             Destroy(other.gameObject);
         }
 
@@ -116,6 +129,10 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene("RetryScreen");
             }
             
+        }
+
+        if(other.gameObject.tag == "Reaper"){
+            SceneManager.LoadScene("DieScreen");
         }
     }
 }

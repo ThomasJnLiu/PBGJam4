@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Treasure
   - Exit
+  - Reaper
   layers:
   - Default
   - TransparentFX
