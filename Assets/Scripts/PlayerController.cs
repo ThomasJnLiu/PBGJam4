@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Treasure"){
             Debug.Log("got treasure");
             score++;
-            scoreText.SetText("Treasure: " + score);
+            scoreText.SetText("Treasure: " + score+"/5");
             Destroy(other.gameObject);
         }
     }

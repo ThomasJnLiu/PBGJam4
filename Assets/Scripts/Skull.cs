@@ -40,7 +40,9 @@ public class Skull : MonoBehaviour
         }
     }
     public IEnumerator PlayerCountdown(){
-        yield return new WaitForSeconds(1.25f);
+        yield return new WaitForSeconds(1.1f);
+
+        // 2 when easiest, 1.1 when hardest
         PlayerCheck();
     }
 
